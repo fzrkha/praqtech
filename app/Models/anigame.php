@@ -11,7 +11,7 @@ class anigame extends Model
 
     protected $guarded = ['id'];
 
-    public function sc() {
+    public function contents() {
         return $this->hasMany(contents::class);
     }
 }

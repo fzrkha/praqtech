@@ -11,7 +11,7 @@ class contents extends Model
 
     protected $guarded = ['id'];
 
-    public function content() {
+    public function anigame() {
         return $this->belongsTo(anigame::class);
     }
 }
