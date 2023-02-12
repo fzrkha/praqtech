@@ -15,3 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [mlesz::class, 'index']);
+
+Route::get('/about', [mlesz::class, 'about']);

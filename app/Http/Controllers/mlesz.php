@@ -10,8 +10,14 @@ class mlesz extends Controller
 {
     public function index() {
         return view('index', [
-            "title" => "Index",
+            "title" => "Home",
             "contents" => contents::all()
+        ]);
+    }
+
+    public function about() {
+        return view('about', [
+            "title" => "About"
         ]);
     }
 }
