@@ -3,7 +3,7 @@
 @section('contents')
 <table width="100%" align="center">
     <tr>
-        <th><center><h1>About this blog</h1></center></th>
+        <th colspan="2"><center><h1>About this blog</h1></center></th>
     </tr>
     <tr>
         <td><h1>Fazrikha</h1></td>

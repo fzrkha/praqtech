@@ -17,9 +17,23 @@
               Guest
             </a>
             <ul class="dropdown-menu">
+              @auth
+              <li><a class="dropdown-item" href="/add">Add Waifu</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <form action="/logout" method="post">
+                  @csrf<button type="submit" class="dropdown-item">Logout</button>
+                </form>
+              </li>
+              @else
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{ auth()->user()->name }}
+            </a>
+              <ul class="dropdown-menu">  
               <li><a class="dropdown-item disabled">Add Waifu</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="/login">Login</a></li>
+              @endauth
             </ul>
           </li>
         </ul>

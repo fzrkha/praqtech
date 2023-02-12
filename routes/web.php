@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\mlesz;
+use App\Http\Controllers\login;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [mlesz::class, 'index']);
 
 Route::get('/about', [mlesz::class, 'about']);
+
+Route::get('/login', [login::class, 'login']);
+Route::post('/login', [login::class, 'auth']);
+Route::post('/logout', [login::class, 'logout']);
